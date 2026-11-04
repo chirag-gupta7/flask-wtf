@@ -1,6 +1,15 @@
 Changes
 =======
 
+Version 1.2.1
+-------------
+
+Unreleased
+
+-   Clarify that ``CSRFProtect`` raises ``CSRFError`` while
+    ``FlaskForm`` without the extension returns ``False``.
+    :issue:`381`
+
 Version 1.2.0
 -------------
 

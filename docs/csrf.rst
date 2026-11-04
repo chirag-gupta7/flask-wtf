@@ -85,7 +85,11 @@ In Axios you can set the header for all requests with ``axios.defaults.headers.c
 Customize the error response
 ----------------------------
 
-When CSRF validation fails, it will raise a :class:`CSRFError`.
+When CSRF validation fails in the ``CSRFProtect``
+extension, it will raise a :class:`CSRFError`.
+When using ``FlaskForm`` without the extension,
+``validate_on_submit()`` returns ``False`` instead,
+check ``form.errors`` for the CSRF failure.
 By default this returns a response with the failure reason and a 400 code.
 You can customize the error response using Flask's
 :meth:`~flask.Flask.errorhandler`. ::
